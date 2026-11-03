@@ -1,0 +1,330 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent-color: #b7ff5a;
+  font-family: "DM Sans", sans-serif;
+  color: #f5f5f5;
+  background: #090909;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 6rem;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+html.dark {
+  --accent-color: #b7ff5a;
+  color-scheme: dark;
+  background: #090909;
+}
+
+html.dark body {
+  color: #f5f1e9;
+  background: #090909;
+}
+
+html.dark .portfolio-page {
+  color: #f5f1e9;
+  background-color: #090909;
+  background-image: linear-gradient(145deg, #090909 0%, #0d0d0d 55%, #090909 100%);
+}
+
+html.dark .portfolio-page [class~="text-accent"],
+html.dark .portfolio-page [class~="text-accent/80"] {
+  color: #b7ff5a !important;
+}
+
+html.dark .portfolio-page [class~="bg-accent"],
+html.dark .portfolio-page [class~="hover:bg-accent"]:hover {
+  background-color: #b7ff5a !important;
+}
+
+html.dark .portfolio-page [class~="hover:text-accent"]:hover,
+html.dark .portfolio-page [class*="group-hover:text-accent"]:hover {
+  color: #b7ff5a !important;
+}
+
+html.dark .portfolio-page [class*="bg-emerald-500/"] {
+  background-color: rgb(183 255 90 / 8%);
+}
+
+html.dark .portfolio-page [class*="bg-violet-500/"] {
+  background-color: rgb(139 92 246 / 6%);
+}
+
+html.dark .portfolio-page [class*="bg-[#171"],
+html.dark .portfolio-page [class*="bg-[#151"] {
+  background-color: #171717 !important;
+}
+
+html.dark .portfolio-page [class*="bg-[#101110]"] {
+  background-color: #101110 !important;
+}
+
+html.dark .portfolio-page [class*="bg-[#202020]"] {
+  background-color: #202020 !important;
+}
+
+html.dark .portfolio-page [class*="bg-[#181818]"] {
+  background-color: rgb(24 24 24 / 86%) !important;
+}
+
+html.dark .portfolio-page [class*="hover:bg-[#caff8c]"]:hover {
+  background-color: #caff8c;
+}
+
+html.dark .portfolio-page [class*="border-white"] {
+  border-color: rgb(255 255 255 / 12%);
+}
+
+html.dark .portfolio-page #about,
+html.dark .portfolio-page #contact {
+  border-color: rgb(255 255 255 / 8%);
+  background-color: rgb(255 255 255 / 1.8%);
+}
+
+html.dark .portfolio-page #contact > div > footer {
+  position: relative;
+  background-image:
+    radial-gradient(ellipse at 12% 10%, rgb(183 255 90 / 5%) 0, transparent 40%),
+    radial-gradient(ellipse at 90% 85%, rgb(255 255 255 / 3%) 0, transparent 42%);
+  background-position: 0% 0%, 100% 100%;
+  background-size: 140% 140%;
+  animation: light-section-glow 18s ease-in-out infinite alternate;
+  transition:
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+html.dark .portfolio-page #contact > div > footer:hover {
+  transform: translateY(-3px);
+  border-color: rgb(183 255 90 / 24%);
+  box-shadow: 0 26px 65px rgb(0 0 0 / 28%), 0 0 40px rgb(183 255 90 / 5%);
+}
+
+html.dark .portfolio-page [class*="bg-[#171717]"][class*="hover:border-white"]:hover,
+html.dark .portfolio-page [class*="bg-[#151615]"][class*="hover:border-white"]:hover {
+  border-color: rgb(183 255 90 / 32%);
+  box-shadow: 0 20px 55px rgb(0 0 0 / 24%), 0 0 35px rgb(183 255 90 / 5%);
+}
+
+html:not(.dark) body {
+  color: #171717;
+  background: #f7f7f7;
+}
+
+html:not(.dark) .portfolio-page {
+  --accent-color: #171717;
+  color: #171717;
+  background-color: #f7f7f7;
+  background-image: linear-gradient(180deg, #fff 0%, #f4f4f4 100%);
+}
+
+html:not(.dark) .portfolio-page [class*="bg-emerald-500/"] {
+  background-color: rgb(0 0 0 / 4%);
+}
+
+html:not(.dark) .portfolio-page [class*="bg-violet-500/"] {
+  background-color: rgb(0 0 0 / 3%);
+}
+
+html:not(.dark) .portfolio-page [class*="text-white"] {
+  color: #171717 !important;
+}
+
+html:not(.dark) .portfolio-page [class~="text-white/80"],
+html:not(.dark) .portfolio-page [class~="text-white/85"],
+html:not(.dark) .portfolio-page [class~="text-white/75"] {
+  color: #303030 !important;
+}
+
+html:not(.dark) .portfolio-page [class~="text-white/65"],
+html:not(.dark) .portfolio-page [class~="text-white/60"],
+html:not(.dark) .portfolio-page [class~="text-white/55"] {
+  color: #555 !important;
+}
+
+html:not(.dark) .portfolio-page [class~="text-white/50"],
+html:not(.dark) .portfolio-page [class~="text-white/45"],
+html:not(.dark) .portfolio-page [class~="text-white/40"] {
+  color: #666 !important;
+}
+
+html:not(.dark) .portfolio-page [class~="text-white/35"] {
+  color: #777 !important;
+}
+
+html:not(.dark) .portfolio-page [class~="text-accent"],
+html:not(.dark) .portfolio-page [class~="text-accent/80"] {
+  color: #171717 !important;
+}
+
+html:not(.dark) .portfolio-page [class~="bg-accent"] {
+  color: #fff !important;
+  background-color: #171717 !important;
+}
+
+html:not(.dark) .portfolio-page [class*="hover:bg-[#caff8c]"]:hover {
+  background-color: #333 !important;
+}
+
+html:not(.dark) .portfolio-page [class~="hover:bg-accent"]:hover {
+  background-color: #333 !important;
+}
+
+html:not(.dark) .portfolio-page [class~="hover:text-accent"]:hover,
+html:not(.dark) .portfolio-page [class*="group-hover:text-accent"]:hover {
+  color: #171717 !important;
+}
+
+html:not(.dark) .portfolio-page [class*="bg-[#101110]"][class*="text-white"],
+html:not(.dark) .portfolio-page [class*="bg-[#101110]"] [class*="text-white"] {
+  color: rgb(255 255 255 / 82%) !important;
+}
+
+html:not(.dark) .portfolio-page [class*="bg-[#101110]"][class~="text-accent"],
+html:not(.dark) .portfolio-page [class*="bg-[#101110]"] [class~="text-accent"] {
+  color: #91a2ff !important;
+}
+
+html:not(.dark) .portfolio-page [class*="bg-black/35"] {
+  color: rgb(255 255 255 / 85%) !important;
+}
+
+html:not(.dark) .portfolio-page [class*="bg-[#171"],
+html:not(.dark) .portfolio-page [class*="bg-[#181"],
+html:not(.dark) .portfolio-page [class*="bg-[#151"] {
+  background-color: #fff !important;
+  box-shadow: 0 18px 50px rgb(0 0 0 / 5%);
+}
+
+html:not(.dark) .portfolio-page [class*="bg-white/["] {
+  background-color: #f7f7f7 !important;
+}
+
+html:not(.dark) .portfolio-page #about,
+html:not(.dark) .portfolio-page #contact {
+  position: relative;
+  border-color: #e5e5e5;
+  background-color: #f1f1f1;
+  background-image:
+    radial-gradient(ellipse at 12% 10%, rgb(255 255 255 / 95%) 0, transparent 44%),
+    radial-gradient(ellipse at 88% 90%, rgb(0 0 0 / 4%) 0, transparent 42%);
+  background-position: 0% 0%, 100% 100%;
+  background-size: 140% 140%;
+  animation: light-section-glow 18s ease-in-out infinite alternate;
+}
+
+html:not(.dark) .portfolio-page [class*="border-white"] {
+  border-color: #e5e5e5 !important;
+}
+
+html:not(.dark) .portfolio-page [class*="bg-[#181818]"] {
+  background-color: rgb(255 255 255 / 88%) !important;
+  box-shadow: 0 12px 35px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(24px);
+}
+
+html:not(.dark) .portfolio-page nav a[aria-current="page"] > span {
+  background-color: #ededed;
+}
+
+html:not(.dark) .portfolio-page article[class*="bg-[#171"] {
+  border-color: #e5e5e5;
+}
+
+html:not(.dark) .portfolio-page article[class*="bg-[#171"]:hover {
+  border-color: #c9c9c9;
+  box-shadow: 0 24px 60px rgb(0 0 0 / 10%);
+}
+
+html:not(.dark) .portfolio-page #about [class*="group/feature"] {
+  z-index: 0;
+  border-radius: 18px;
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+html:not(.dark) .portfolio-page #about [class*="group/feature"]:hover {
+  z-index: 1;
+  transform: translateY(-4px);
+  background: linear-gradient(145deg, #fff 0%, #f3f3f3 100%);
+  box-shadow: 0 16px 38px rgb(0 0 0 / 8%);
+}
+
+html:not(.dark) .portfolio-page #contact .grid > div:hover {
+  border-color: #c9c9c9 !important;
+  box-shadow: 0 20px 48px rgb(0 0 0 / 9%);
+}
+
+html:not(.dark) .portfolio-page #contact .grid a[class*="bg-white/"]:hover {
+  border-color: #d0d0d0;
+  background-color: #f0f0f0;
+}
+
+html:not(.dark) .portfolio-page #contact > div > footer {
+  position: relative;
+  border-color: #e5e5e5;
+  background-color: rgb(255 255 255 / 88%);
+  background-image:
+    radial-gradient(ellipse at 12% 10%, rgb(0 0 0 / 3%) 0, transparent 40%),
+    radial-gradient(ellipse at 90% 85%, rgb(0 0 0 / 5%) 0, transparent 42%);
+  background-position: 0% 0%, 100% 100%;
+  background-size: 140% 140%;
+  animation: light-section-glow 18s ease-in-out infinite alternate;
+  box-shadow: 0 20px 55px rgb(0 0 0 / 7%);
+  transition:
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+html:not(.dark) .portfolio-page #contact > div > footer:hover {
+  transform: translateY(-3px);
+  border-color: #c9c9c9;
+  box-shadow: 0 26px 65px rgb(0 0 0 / 10%);
+}
+
+html:not(.dark) .portfolio-page #contact > div > footer [class*="bg-accent/"] {
+  background-color: rgb(0 0 0 / 4%);
+}
+
+@keyframes light-section-glow {
+  from {
+    background-position: 0% 0%, 100% 100%;
+  }
+
+  to {
+    background-position: 100% 60%, 0% 40%;
+  }
+}
+
+::selection {
+  color: #10110e;
+  background: var(--accent-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
